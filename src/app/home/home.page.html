@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-toolbar style="--background:transparent">
+        <div style="text-align: center">
+            <ion-title>
+                My Notes
+            </ion-title>
+        </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen style="--color: white; --background: url('https://images.unsplash.com/photo-1530579807716-d82c0991629a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8c708171e9cdb8ae7ed04f8e37e2808c&auto=format&fit=crop&w=934&q=80') no-repeat center center fixed">
+    <ion-list>
+        <button ion-item *ngFor='let note of notes'>
+            {{note.title}}
+        </button>
+    </ion-list>
+    <div style="text-align: center">
+        <ion-button (click)=addNotes() id="Add Notes">Add notes</ion-button>
+    </div>
+</ion-content>
